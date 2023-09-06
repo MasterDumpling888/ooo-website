@@ -1,34 +1,121 @@
+:root {
+  /* Set Variables */
+
+  /* Colour Palette */
+  /* Dark Mode Palette */
+  --green-accent: #8fff00;
+  --orange-accent: #ff6b00;
+  --blue: #009aa4;
+  --dark-blue: #141648;
+
+  /* Light Mode Palette */
+  --yellow-accent: #fff6a0;
+  --bright-pink-accent: #ff688c;
+  --pink: #f6b4c7;
+  --light-blue: #d1fcff;
+
+  /* Global Colours */
+  --white: #fff;
+  --black: #000;
+  --glow-white: rgba(255, 255, 255, 0.5);
+  --glow-black: rgba(0, 0, 0, 0.3);
+  --transparent-black: #0728404f;
+
+  /* Text Responsive values ref: https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,s-l&g=s,l,xl,12 (Used Utopia Type Calculator to get values)*/
+  --text-smaller: clamp(0.52rem, calc(0.37rem + 0.76vw), 0.96rem);
+  --text-small: clamp(0.7rem, calc(0.57rem + 0.63vw), 1.33rem);
+  --text-regular: clamp(0.88rem, calc(0.65rem + 1.13vw), 2rem);
+  --text-large: clamp(1.09rem, calc(0.71rem + 1.91vw), 3rem);
+  --text-larger: clamp(1.71rem, calc(0.7rem + 5.04vw), 6.75rem);
+
+  --space-3xs: clamp(0.13rem, calc(0.06rem + 0.33vw), 0.31rem);
+  --space-2xs: clamp(0.31rem, calc(0.2rem + 0.54vw), 0.63rem);
+  --space-xs: clamp(0.44rem, calc(0.26rem + 0.87vw), 0.94rem);
+  --space-s: clamp(0.56rem, calc(0.32rem + 1.2vw), 1.25rem);
+  --space-m: clamp(0.88rem, calc(0.53rem + 1.74vw), 1.88rem);
+  --space-l: clamp(1.13rem, calc(0.65rem + 2.39vw), 2.5rem);
+  --space-xl: clamp(1.69rem, calc(0.97rem + 3.59vw), 3.75rem);
+  --space-2xl: clamp(2.25rem, calc(1.29rem + 4.78vw), 5rem);
+  --space-3xl: clamp(3.38rem, calc(1.94rem + 7.17vw), 7.5rem);
+}
+
 * {
   box-sizing: border-box;
 }
 
-body{
-  margin: 0;
+body {
   padding: 0;
-  line-height: 1.5;
+  background: indigo;
+  color: var(--white);
+  font-size: var(--text-regular);
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
 }
 
 .page-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 0 auto;
   border: 5px solid red;
+  width: min(100% - 4rem, 70rem);
+  height: 100vh;
 }
 
 .header-nav {
-  display: flex;
   width: 100%;
-  flex-direction: row;
   border: 5px solid pink;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 4px solid yellow;
+}
+
+.nav-toggle {
+  display: flex;
+  flex-direction: row;
+  border: 4px solid yellowgreen;
+}
+
+.nav-toggle nav ul li{
+  display: inline;
+}
+
+.hero-content img {
+  max-width: 70%;
+}
+
+
+.hero-section svg {
+  max-width: 40%;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 .container-wrapper {
   display: flex;
   flex-direction: column;
   gap: 10rem;
-  border: 5px solid green;
+  /* border: 5px solid green; */
 }
 
-.container{
-  border: 5px solid blue;
+.container {
+  /* border: 5px solid blue; */
+}
+
+.stroke {
+  position: absolute;
+  width: 5px;
+  height: 100% !important;
+  background: linear-gradient(180deg,
+      #fff 3.05%,
+      rgba(143, 255, 0, 0.89) 20.35%,
+      rgba(143, 255, 0, 0.89) 76.31%,
+      rgb(255, 255, 255) 97.68%);
+  border-radius: 0.1rem;
 }

@@ -12,8 +12,63 @@
       <header>
         <div class="nav-bar">
           <div class="logo">
+            <!-- Home navigation logo -->
             <a href="/">
-              <!-- svg logo -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="125"
+                height="125"
+                viewBox="0 0 125 125"
+                fill="none"
+                alt="navigation logo">
+                
+                <g filter="url(#white-glow)"> <!-- Draw logo -->
+                  <path 
+                    class="pulse"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M101.729 62.865C101.729 41.1462 84.1217 23.5396 62.4023 23.5396C40.683 23.5396 23.0759 41.1462 23.0759 62.865C23.0759 84.5838 40.683 102.19 62.4023 102.19C84.1217 102.19 101.729 84.5838 101.729 62.865ZM40.122 48.5306C40.122 46.5286 40.386 44.5884 40.8811 42.7427C36.5626 47.7321 33.9499 54.2387 33.9499 61.3555C33.9499 77.0705 46.6891 89.8099 62.4036 89.8099C78.1182 89.8099 90.8574 77.0705 90.8574 61.3555C90.8574 54.2388 88.2448 47.7324 83.9264 42.7429C84.4215 44.5886 84.6855 46.5287 84.6855 48.5306C84.6855 60.8362 74.7096 70.8118 62.4037 70.8118C50.0978 70.8118 40.122 60.8362 40.122 48.5306Z"
+                    fill="white"/>
+                </g>
+                <defs>
+                  <filter
+                    id="white-glow"
+                    x="0.3328"
+                    y="0.796911"
+                    width="124.139"
+                    height="124.137"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0
+                              0 0 0 0 0 
+                              0 0 0 0 0 
+                              0 0 0 127 0"
+                      result="hardAlpha"/>
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="11.3716" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 1 
+                              0 0 0 0 1 
+                              0 0 0 0 1 
+                              0 0 0 0.46 0"/>
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_403_309"/>
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_403_309"
+                      result="shape"/>
+                  </filter>
+                </defs>
+              </svg>
             </a>
           </div>
           
@@ -44,21 +99,126 @@
     <div class="container-wrapper">
       <div class="container">
         <div class="hero-section">
-          <!-- svg logo -->
-          <div class="hero-box">
-            <!-- stroke div -->
-            <div class="hero-content">
-              <h1>Order of Otakus</h1>
-              <div class="sub-nav">
-                <ul>
-                  <li>
-                    <a href="/about.html">Who we are</a>
-                  </li>
-                  <li>
-                    <a href="/register.html">Join us</a>
-                  </li>
-                </ul>
-              </div>
+          <!-- <div class="stroke"></div> -->
+          <!-- stroke div -->
+          <div class="hero-content">
+            <img class="pan" src="/img/title.png" alt="title" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 800 800"
+              fill="white"
+              >
+              <g>
+                <!-- Draw logo (g filter stated by CSS)-->
+                <path
+                  class="pulse"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M623.798 381.411C623.798 247.985 515.632 139.821 382.202 139.821C248.773 139.821 140.607 247.985 140.607 381.411C140.607 514.837 248.773 623 382.202 623C515.632 623 623.798 514.837 623.798 381.411ZM245.328 293.341C245.328 281.045 246.949 269.128 249.99 257.792C223.461 288.443 207.411 328.415 207.411 372.135C207.411 468.677 285.672 546.94 382.212 546.94C478.751 546.94 557.013 468.677 557.013 372.135C557.013 328.416 540.963 288.445 514.436 257.794C517.476 269.13 519.097 281.046 519.097 293.341C519.097 368.939 457.812 430.222 382.212 430.222C306.613 430.222 245.328 368.939 245.328 293.341Z"
+                  fill="white"
+                  fill-opacity="0.02"
+                  shape-rendering="crispEdges"
+                />
+              </g>
+              <defs>
+                <!-- Filter for dark mode -->
+                <filter
+                  id="glow-darkmode"
+                  x="0"
+                  y="0"
+                  width="800"
+                  height="800"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0
+                          0 0 0 0 0 
+                          0 0 0 0 0 
+                          0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feGaussianBlur stdDeviation="69.8594" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix
+                    class="back-logo"
+                    type="matrix"
+                    values="0 0 0 0 0.56
+                          0 0 0 0 1 
+                          0 0 0 0 0 
+                          0 0 0 0.37 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_408_31"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_408_31"
+                    result="shape"
+                  />
+                </filter>
+  
+                <!-- Filter for light mode -->
+                <filter
+                  id="glow-lightmode"
+                  x="0"
+                  y="0"
+                  width="800"
+                  height="800"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 
+                          0 0 0 0 0 
+                          0 0 0 0 0 
+                          0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feGaussianBlur stdDeviation="70" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 1 
+                          0 0 0 0 0.962917 
+                          0 0 0 0 0.629167 
+                          0 0 0 1 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_436_37"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_436_37"
+                    result="shape"
+                  />
+                </filter>
+              </defs>
+            </svg>
+            <div class="motto">
+              <p>A place for all who share a love and passion for anime.</p>
+            </div>
+            <div class="sub-nav">
+              <ul>
+                <li>
+                  <a href="/about.html">Who we are</a>
+                </li>
+                <li>
+                  <a href="/register.html">Join us</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
