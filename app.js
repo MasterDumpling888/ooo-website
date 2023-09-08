@@ -81,3 +81,28 @@ function createSlider(animeData) {
 }
 
 fetchData();
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const articleContent = document.getElementById('article-content');
+
+//   function getParameter(name) {
+//     const queryString = window.location.search;
+//     const urlParams = new URLSearchParams(queryString);
+//     return urlParams.get(name);
+//   }
+
+//   const articleIndex = getParameter('article');
+
+//   const articles = [
+//     "<h2>Article 1</h2><p>Lorem ipsum dolor sit amet conse</p>",
+//     "<h2>Article 2</h2><p>Lorem ipsum dolor sit amet conse</p>",
+//     "<h2>Article 3</h2><p>Lorem ipsum dolor sit amet conse</p>"
+//   ];
+
+//   if (articleIndex >= 0 && articleIndex < articles.length) {
+//     articleContent.innerHTML = articles[articleIndex - 1];
+//   } else {
+//     articleContent.innerHTML = "<p>Article not found.</p>";
+//   }
+// });
