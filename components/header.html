@@ -1,0 +1,125 @@
+<div class="nav-bar">
+  <div class="logo">
+    <!-- Home navigation logo -->
+    <a href="/">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="125"
+        height="125"
+        viewBox="0 0 125 125"
+        fill="none"
+        alt="navigation logo"
+      >
+        <g filter="url(#white-glow)">
+          <!-- Draw logo -->
+          <path
+            class="pulse"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M101.729 62.865C101.729 41.1462 84.1217 23.5396 62.4023 23.5396C40.683 23.5396 23.0759 41.1462 23.0759 62.865C23.0759 84.5838 40.683 102.19 62.4023 102.19C84.1217 102.19 101.729 84.5838 101.729 62.865ZM40.122 48.5306C40.122 46.5286 40.386 44.5884 40.8811 42.7427C36.5626 47.7321 33.9499 54.2387 33.9499 61.3555C33.9499 77.0705 46.6891 89.8099 62.4036 89.8099C78.1182 89.8099 90.8574 77.0705 90.8574 61.3555C90.8574 54.2388 88.2448 47.7324 83.9264 42.7429C84.4215 44.5886 84.6855 46.5287 84.6855 48.5306C84.6855 60.8362 74.7096 70.8118 62.4037 70.8118C50.0978 70.8118 40.122 60.8362 40.122 48.5306Z"
+            fill="white"
+          />
+        </g>
+        <defs>
+          <filter
+            id="white-glow"
+            x="0.3328"
+            y="0.796911"
+            width="124.139"
+            height="124.137"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix
+              in="SourceAlpha"
+              type="matrix"
+              values="0 0 0 0 0
+                      0 0 0 0 0 
+                      0 0 0 0 0 
+                      0 0 0 127 0"
+              result="hardAlpha"
+            />
+            <feOffset />
+            <feGaussianBlur stdDeviation="11.3716" />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix
+              type="matrix"
+              values="0 0 0 0 1 
+                      0 0 0 0 1 
+                      0 0 0 0 1 
+                      0 0 0 0.46 0"
+            />
+            <feBlend
+              mode="normal"
+              in2="BackgroundImageFix"
+              result="effect1_dropShadow_403_309"
+            />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="effect1_dropShadow_403_309"
+              result="shape"
+            />
+          </filter>
+        </defs>
+      </svg>
+    </a>
+  </div>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/browse.html">Browse</a>
+      </li>
+      <li>
+        <a href="/read.html">Reading</a>
+      </li>
+      <li>
+        <a href="/report.html">Report</a>
+      </li>
+    </ul>
+  </nav>
+  <input id="menu" type="checkbox" />
+  <div class="menu-nav">
+    <label for="menu" role="menu">
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </label>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/browse.html">Browse</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/register.html">Register</a></li>
+      <li><a href="/register.html">Report</a></li>
+    </ul>
+  </div>
+  <!-- background logo -->
+  <img class="back-logo" alt="Background Logo" />
+</div>
+<label for="toggle" role="toggle-button"
+  ><!-- Color mode toggle switch -->
+  <input id="toggle" type="checkbox" />
+  <div class="toggle-box">
+    <!-- Logo in color mode toggle -->
+    <svg
+      class="toggle-svg"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 80 80"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M65.6606 40.3821C65.6606 26.505 54.4107 15.2554 40.5333 15.2554C26.6559 15.2554 15.406 26.505 15.406 40.3821C15.406 54.2592 26.6559 65.5088 40.5333 65.5088C54.4107 65.5088 65.6606 54.2592 65.6606 40.3821ZM26.2974 31.2235C26.2974 29.9443 26.4661 28.7045 26.7825 27.5252C24.0232 30.7132 22.3538 34.8706 22.3538 39.4179C22.3538 49.4588 30.4934 57.5986 40.5341 57.5986C50.5748 57.5986 58.7144 49.4588 58.7144 39.4179C58.7144 34.8707 57.0451 30.7135 54.2859 27.5255C54.6022 28.7048 54.7709 29.9445 54.7709 31.2235C54.7709 39.0861 48.3969 45.4599 40.5342 45.4599C32.6714 45.4599 26.2974 39.0861 26.2974 31.2235Z"
+        fill="#141648"
+      />
+    </svg>
+  </div>
+</label>

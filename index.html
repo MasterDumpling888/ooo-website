@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order of Otakus: Home</title>
-    <script defer src="app.js"></script>
+
+    <script type="module" defer src="app.js"></script>
+
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat"
       rel="stylesheet"
@@ -13,228 +15,29 @@
   </head>
   <body>
     <div class="page-wrapper">
-      <div class="header-nav">
-        <header>
-          <div class="nav-bar">
-            <div class="logo">
-              <!-- Home navigation logo -->
-              <a href="/">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="125"
-                  height="125"
-                  viewBox="0 0 125 125"
-                  fill="none"
-                  alt="navigation logo"
-                >
-                  <g filter="url(#white-glow)">
-                    <!-- Draw logo -->
-                    <path
-                      class="pulse"
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M101.729 62.865C101.729 41.1462 84.1217 23.5396 62.4023 23.5396C40.683 23.5396 23.0759 41.1462 23.0759 62.865C23.0759 84.5838 40.683 102.19 62.4023 102.19C84.1217 102.19 101.729 84.5838 101.729 62.865ZM40.122 48.5306C40.122 46.5286 40.386 44.5884 40.8811 42.7427C36.5626 47.7321 33.9499 54.2387 33.9499 61.3555C33.9499 77.0705 46.6891 89.8099 62.4036 89.8099C78.1182 89.8099 90.8574 77.0705 90.8574 61.3555C90.8574 54.2388 88.2448 47.7324 83.9264 42.7429C84.4215 44.5886 84.6855 46.5287 84.6855 48.5306C84.6855 60.8362 74.7096 70.8118 62.4037 70.8118C50.0978 70.8118 40.122 60.8362 40.122 48.5306Z"
-                      fill="white"
-                    />
-                  </g>
-                  <defs>
-                    <filter
-                      id="white-glow"
-                      x="0.3328"
-                      y="0.796911"
-                      width="124.139"
-                      height="124.137"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0
-                              0 0 0 0 0 
-                              0 0 0 0 0 
-                              0 0 0 127 0"
-                        result="hardAlpha"
-                      />
-                      <feOffset />
-                      <feGaussianBlur stdDeviation="11.3716" />
-                      <feComposite in2="hardAlpha" operator="out" />
-                      <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 1 
-                              0 0 0 0 1 
-                              0 0 0 0 1 
-                              0 0 0 0.46 0"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in2="BackgroundImageFix"
-                        result="effect1_dropShadow_403_309"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="effect1_dropShadow_403_309"
-                        result="shape"
-                      />
-                    </filter>
-                  </defs>
-                </svg>
-              </a>
-            </div>
-
-            <div class="nav-toggle">
-              <nav>
-                <ul>
-                  <li>
-                    <a href="/">Home</a>
-                  </li>
-                  <li>
-                    <a href="/browse.html">Browse</a>
-                  </li>
-                  <li>
-                    <a href="/read.html">Reading</a>
-                  </li>
-                  <li>
-                    <a href="/report.html">Report</a>
-                  </li>
-                </ul>
-              </nav>
-              <div class="mode-toggle">
-                <!-- color mode toggle -->
-              </div>
-            </div>
-          </div>
-        </header>
-      </div>
-
+      <header id="header"></header>
       <div class="container">
-        <section id="hero">
+        <section id="hero" class="hidden">
           <!-- <div class="stroke"></div> -->
           <!-- stroke div -->
-          <div class="hero-content">
-            <img class="pan" src="/img/title.png" alt="title" />
-            <!-- background logo -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 800 800"
-              fill="white"
-            >
-              <g>
-                <!-- Draw logo (g filter stated by CSS)-->
-                <path
-                  class="pulse"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M623.798 381.411C623.798 247.985 515.632 139.821 382.202 139.821C248.773 139.821 140.607 247.985 140.607 381.411C140.607 514.837 248.773 623 382.202 623C515.632 623 623.798 514.837 623.798 381.411ZM245.328 293.341C245.328 281.045 246.949 269.128 249.99 257.792C223.461 288.443 207.411 328.415 207.411 372.135C207.411 468.677 285.672 546.94 382.212 546.94C478.751 546.94 557.013 468.677 557.013 372.135C557.013 328.416 540.963 288.445 514.436 257.794C517.476 269.13 519.097 281.046 519.097 293.341C519.097 368.939 457.812 430.222 382.212 430.222C306.613 430.222 245.328 368.939 245.328 293.341Z"
-                  fill="white"
-                  fill-opacity="0.02"
-                  shape-rendering="crispEdges"
-                />
-              </g>
-              <defs>
-                <!-- Filter for dark mode -->
-                <filter
-                  id="glow-darkmode"
-                  x="0"
-                  y="0"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0
-                          0 0 0 0 0 
-                          0 0 0 0 0 
-                          0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feGaussianBlur stdDeviation="69.8594" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    class="back-logo"
-                    type="matrix"
-                    values="0 0 0 0 0.56
-                          0 0 0 0 1 
-                          0 0 0 0 0 
-                          0 0 0 0.37 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_408_31"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_408_31"
-                    result="shape"
-                  />
-                </filter>
 
-                <!-- Filter for light mode -->
-                <filter
-                  id="glow-lightmode"
-                  x="0"
-                  y="0"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 
-                          0 0 0 0 0 
-                          0 0 0 0 0 
-                          0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feGaussianBlur stdDeviation="70" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 1 
-                          0 0 0 0 0.962917 
-                          0 0 0 0 0.629167 
-                          0 0 0 1 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_436_37"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_436_37"
-                    result="shape"
-                  />
-                </filter>
-              </defs>
-            </svg>
+          <div class="hero-content">
+            <img class="pan" alt="title" />
+
             <div class="motto">
               <p>A place for all who share a love and passion for anime.</p>
             </div>
             <div class="sub-nav">
-              <ul>
-                <li>
-                  <a href="/about.html">Who we are</a>
-                </li>
-                <li>
-                  <a href="/register.html">Join us</a>
-                </li>
-              </ul>
+              <a href="/about.html">Who we are</a>
+              <a href="/register.html">Join us</a>
             </div>
           </div>
         </section>
-        <section id="quotes">
+        <section id="quotes" class="hidden">
           <div class="quote-content">
             <img
-              src="/img/prof-heartramen-americano.jpeg"
+              class="profile-img"
+              src="/img/prof-iheartramen.jpg"
               alt="quote author profile"
             />
             <div class="quote-text">
@@ -245,7 +48,11 @@
             </div>
           </div>
           <div class="quote-content">
-            <img src="/img/prof-tanuki.jpeg" alt="quote author profile" />
+            <img
+              class="profile-img"
+              src="/img/prof-tanuki.jpeg"
+              alt="quote author profile"
+            />
             <div class="quote-text">
               <p>“We’re fun...”</p>
               <span>
@@ -255,133 +62,95 @@
           </div>
         </section>
 
-        <section id="top-anime">
+        <section id="top-anime" class="hidden">
           <h2>Our Top Anime Picks This Week</h2>
           <div class="carousel-wrapper">
             <div class="carousel">
-              <!-- *data from Kitsu api -->
+              <!-- data to be populated by createSlider() -->
             </div>
           </div>
-          <div class="section-blur"></div>
+          <div class="top-anime-grad section-blur"></div>
         </section>
 
-        <section id="featured">
+        <section id="featured" class="hidden">
           <h2>Featured Articles</h2>
-            <a href="/read.html">
-              <div class="banner">
-                <img src="/img/featured-1.jpeg" alt="">
-                <div class="article-title">
-                  <p>
-                    <i>
-                      The Yakuza’s Guide to Babysitting:
+          <a href="/anime.html?type=article&id=art1">
+            <div class="banner">
+              <img src="/img/anime_imgs/yakuza-babysitter-banner.jpeg" alt="" />
+              <div class="featured-title">
+                <p>
+                  <i>
+                    The Yakuza’s Guide to Babysitting:
                     <b>Wholesome...just wholesome</b>
-                    </i>
-                  </p>
-                  <div class="author-content">
-                    <img src="/img/prof-heartramen-americano.jpeg" alt="">
-                    <div class="author-text">
-                      <p>iheartramen</p>
+                  </i>
+                </p>
+                <div class="author-content">
+                  <img
+                    class="profile-img"
+                    src="/img/prof-iheartramen.jpg"
+                    alt=""
+                  />
+                  <div class="author-text">
+                    <p>iheartramen</p>
                     <span>
                       <em> OoO President </em>
                     </span>
-                    </div>
                   </div>
                 </div>
               </div>
-            </a>
-            <a href="/read.html">
-              <div class="banner">
-                <img src="/img/featured-2.jpeg" alt="">
-                <div class="article-title">
-                  <p>
-                    <i>
-                      Jujutsu Kaisen Season 2:
+            </div>
+          </a>
+          <a href="/anime.html?type=article&id=art2">
+            <div class="banner">
+              <img src="/img/anime_imgs/jujutsu-kaisen-banner.jpeg" alt="" />
+              <div class="featured-title">
+                <p>
+                  <i>
+                    Jujutsu Kaisen Season 2:
                     <b>No stitches yet?</b>
-                    </i>
-                  </p>
-                  <div class="author-content">
-                    <img src="/img/prof-heartramen-americano.jpeg" alt="">
-                    <div class="author-text">
-                      <p>icedAmericano</p>
+                  </i>
+                </p>
+                <div class="author-content">
+                  <img
+                    class="profile-img"
+                    src="/img/prof-icedamericano.jpg"
+                    alt=""
+                  />
+                  <div class="author-text">
+                    <p>icedAmericano</p>
                     <span>
                       <em> OoO Vice President </em>
                     </span>
-                    </div>
                   </div>
                 </div>
               </div>
-            </a>
-            <a href="/read.html">
-              <div class="banner">
-                <img src="/img/featured-3.jpeg" alt="">
-                <div class="article-title">
-                  <p>
-                    <i>
-                      Chainsawman:
+            </div>
+          </a>
+          <a href="/anime.html?type=article&id=art3">
+            <div class="banner">
+              <img src="/img/anime_imgs/chainsawman-banner.jpeg" alt="" />
+              <div class="featured-title">
+                <p>
+                  <i>
+                    Chainsawman:
                     <b>Should I just read it?</b>
-                    </i>
-                  </p>
-                  <div class="author-content">
-                    <img src="/img/prof-tanuki.jpeg" alt="">
-                    <div class="author-text">
-                      <p>tanuki-san</p>
+                  </i>
+                </p>
+                <div class="author-content">
+                  <img class="profile-img" src="/img/prof-tanuki.jpeg" alt="" />
+                  <div class="author-text">
+                    <p>tanuki-san</p>
                     <span>
                       <em> OoO Writer </em>
                     </span>
-                    </div>
                   </div>
                 </div>
               </div>
-            </a>
-          <div class="section-blur"></div>
+            </div>
+          </a>
+          <div class="featured-grad section-blur"></div>
         </section>
-
-        <footer>
-          <div class="footer-title">
-            <!-- OoO footer logo -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 130 130"
-              fill="none"
-              alt="footer logo"
-            >
-              <g filter="url(#white-glow)">
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M101.729 62.865C101.729 41.1462 84.1217 23.5396 62.4023 23.5396C40.683 23.5396 23.0759 41.1462 23.0759 62.865C23.0759 84.5838 40.683 102.19 62.4023 102.19C84.1217 102.19 101.729 84.5838 101.729 62.865ZM40.122 48.5306C40.122 46.5286 40.386 44.5884 40.8811 42.7427C36.5626 47.7321 33.9499 54.2387 33.9499 61.3555C33.9499 77.0705 46.6891 89.8099 62.4036 89.8099C78.1182 89.8099 90.8574 77.0705 90.8574 61.3555C90.8574 54.2388 88.2448 47.7324 83.9264 42.7429C84.4215 44.5886 84.6855 46.5287 84.6855 48.5306C84.6855 60.8362 74.7096 70.8118 62.4037 70.8118C50.0978 70.8118 40.122 60.8362 40.122 48.5306Z"
-                />
-              </g>
-            </svg>
-            <h3>Order of Otakus</h3>
-          </div>
-          <div class="footer-content">
-            <div class="footer-contact">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 130 100"
-                fill="none"
-              >
-                <path
-                  d="M52.2223 54.0878C52.2223 55.3677 51.8427 56.6189 51.1316 57.6832C50.4206 58.7474 49.4098 59.5769 48.2273 60.0667C47.0448 60.5565 45.7436 60.6847 44.4883 60.435C43.2329 60.1853 42.0798 59.5689 41.1748 58.6638C40.2697 57.7588 39.6533 56.6057 39.4036 55.3503C39.1539 54.095 39.2821 52.7938 39.7719 51.6113C40.2617 50.4288 41.0912 49.4181 42.1554 48.707C43.2197 47.9959 44.4709 47.6163 45.7508 47.6163C47.4671 47.6163 49.1132 48.2981 50.3268 49.5118C51.5405 50.7254 52.2223 52.3715 52.2223 54.0878ZM84.5798 47.6163C83.2999 47.6163 82.0487 47.9959 80.9844 48.707C79.9202 49.4181 79.0907 50.4288 78.6009 51.6113C78.1111 52.7938 77.9829 54.095 78.2326 55.3503C78.4823 56.6057 79.0987 57.7588 80.0038 58.6638C80.9088 59.5689 82.0619 60.1853 83.3173 60.435C84.5726 60.6847 85.8738 60.5565 87.0563 60.0667C88.2388 59.5769 89.2495 58.7474 89.9606 57.6832C90.6717 56.6189 91.0513 55.3677 91.0513 54.0878C91.0513 52.3715 90.3695 50.7254 89.1558 49.5118C87.9422 48.2981 86.2961 47.6163 84.5798 47.6163ZM124.73 82.6163L88.5975 98.6387C87.5111 99.1217 86.3373 99.3774 85.1484 99.3902C83.9595 99.4029 82.7805 99.1724 81.6839 98.7127C80.5874 98.2531 79.5964 97.5741 78.7719 96.7174C77.9474 95.8607 77.3068 94.8445 76.8895 93.7311L72.5158 81.8667C70.0998 82.0285 67.6496 82.1112 65.1653 82.1148C62.681 82.1184 60.2308 82.0357 57.8148 81.8667L53.4411 93.7311C53.0231 94.844 52.3821 95.8597 51.5575 96.7159C50.7329 97.5722 49.742 98.2509 48.6457 98.7104C47.5493 99.17 46.3707 99.4007 45.182 99.3883C43.9933 99.376 42.8196 99.1209 41.7331 98.6387L5.60053 82.6163C3.73558 81.8009 2.22073 80.3499 1.32591 78.5217C0.431086 76.6936 0.214429 74.6071 0.714545 72.634L16.629 9.86589C17.049 8.2335 17.936 6.75901 19.1812 5.62299C20.4264 4.48697 21.9759 3.73873 23.6398 3.46989L43.0867 0.271885C45.2305 -0.0729264 47.426 0.391947 49.246 1.57609C51.0661 2.76024 52.3807 4.57901 52.9342 6.67867L54.6922 13.6032C58.1185 13.2688 61.6096 13.1016 65.1653 13.1016C68.721 13.1016 72.2084 13.2688 75.6275 13.6032L77.3856 6.67867C77.938 4.57836 79.2524 2.75885 81.0727 1.57451C82.8931 0.390175 85.0891 -0.0741806 87.2331 0.271885L106.691 3.46989C108.355 3.73873 109.904 4.48697 111.149 5.62299C112.395 6.75901 113.282 8.2335 113.702 9.86589L129.627 72.6287C130.128 74.6037 129.91 76.6925 129.013 78.522C128.116 80.3515 126.598 81.8027 124.73 82.6163ZM121.252 74.7319L105.326 12.0231C105.326 12.0231 105.326 12.0231 105.283 12.0231L85.8363 8.7873C85.8224 8.77926 85.8066 8.77502 85.7905 8.77502C85.7744 8.77502 85.7586 8.77926 85.7447 8.7873L84.2185 14.795C86.9149 15.3019 89.6114 15.906 92.2162 16.6394C93.2431 16.9012 94.1378 17.5318 94.7295 18.4109C95.3213 19.2901 95.5688 20.3563 95.4248 21.4062C95.2808 22.4562 94.7554 23.4164 93.9488 24.1038C93.1422 24.7912 92.1108 25.1576 91.0513 25.1332C90.6575 25.1321 90.2656 25.0777 89.8864 24.9714C81.8291 22.7851 73.5139 21.6949 65.1653 21.7303C56.817 21.6931 48.5017 22.7815 40.4442 24.9661C39.8937 25.1362 39.3148 25.1944 38.7415 25.1372C38.1682 25.08 37.6122 24.9086 37.1063 24.633C36.6003 24.3574 36.1547 23.9833 35.7957 23.5327C35.4366 23.0821 35.1715 22.5642 35.0159 22.0095C34.8603 21.4548 34.8174 20.8745 34.8896 20.3029C34.9619 19.7313 35.1479 19.18 35.4368 18.6815C35.7256 18.183 36.1113 17.7474 36.5712 17.4003C37.0311 17.0533 37.5558 16.8019 38.1144 16.661C40.7138 15.9275 43.3887 15.3235 46.1067 14.8166L44.5805 8.7873C44.5805 8.7873 44.5805 8.7873 44.5158 8.7873L25.0474 11.9853C25.0315 11.9809 25.0147 11.9809 24.9988 11.9853L9.07896 74.7589L45.2115 90.7596C45.2297 90.7696 45.2501 90.7748 45.2708 90.7748C45.2915 90.7748 45.3119 90.7696 45.3301 90.7596L48.9865 80.9014C45.3231 80.341 41.6962 79.563 38.1252 78.5716C37.0616 78.2318 36.1711 77.4928 35.6411 76.51C35.111 75.5272 34.9827 74.3772 35.2829 73.3017C35.5832 72.2263 36.2888 71.3091 37.2513 70.7431C38.2138 70.177 39.3583 70.0062 40.4442 70.2666C48.5012 72.4537 56.8168 73.5421 65.1653 73.5023C73.5138 73.5421 81.8294 72.4537 89.8864 70.2666C90.9885 69.9576 92.1681 70.0991 93.1658 70.6599C94.1635 71.2207 94.8976 72.1549 95.2065 73.2569C95.5155 74.359 95.374 75.5386 94.8132 76.5363C94.2524 77.534 93.3182 78.2681 92.2162 78.577C88.6415 79.567 85.011 80.3432 81.344 80.9014L84.9843 90.7596C85.0016 90.7691 85.0211 90.774 85.0409 90.774C85.0607 90.774 85.0801 90.7691 85.0975 90.7596L121.252 74.7319Z"
-                />
-              </svg>
-              <p>https://discord.gg/</p>
-            </div>
-            <div class="footer-contact">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 130 100"
-                fill="none"
-              >
-                <path
-                  d="M108.145 0.103516H4.60144C3.45721 0.103516 2.35984 0.558061 1.55075 1.36716C0.741654 2.17625 0.287109 3.27362 0.287109 4.41785V77.7615C0.287109 80.05 1.1962 82.2447 2.81439 83.8629C4.43258 85.4811 6.62731 86.3902 8.91578 86.3902H103.831C106.12 86.3902 108.314 85.4811 109.933 83.8629C111.551 82.2447 112.46 80.05 112.46 77.7615V4.41785C112.46 3.27362 112.005 2.17625 111.196 1.36716C110.387 0.558061 109.29 0.103516 108.145 0.103516ZM56.3735 46.0242L15.6947 8.73218H97.0522L56.3735 46.0242ZM40.5776 43.2469L8.91578 72.2661V14.2276L40.5776 43.2469ZM46.9628 49.0982L53.4343 55.0573C54.2303 55.788 55.2714 56.1934 56.3519 56.1934C57.4324 56.1934 58.4735 55.788 59.2694 55.0573L65.7409 49.0982L97.0199 77.7615H15.6947L46.9628 49.0982ZM72.1693 43.2469L103.831 14.2222V72.2715L72.1693 43.2469Z"
-                />
-              </svg>
-              <p>orderofotakus@email.com</p>
-            </div>
-          </div>
-        </footer>
+        <footer id="footer"></footer>
       </div>
     </div>
   </body>
